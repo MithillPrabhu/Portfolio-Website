@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mithill Prabhu</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+
+  <!-- custom css link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Skills Button Styles */
+    .skills-button {
+      width: 180px;
+      height: 45px;
+      font-size: 1em;
+      cursor: pointer;
+      background-color: #2b2b2c;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      transition: all .4s;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      margin: 8px;
+      text-transform: capitalize;
+    }
+
+    .skills-button:hover {
+      border-radius: 8px;
+      transform: translateY(-10px);
+      box-shadow: 0 7px 0 -2px #ff7b00,
+                  0 15px 0 -4px #ffb600,
+                  0 16px 10px -3px #ffb600;
+    }
+
+    .skills-button:active {
+      transition: all 0.2s;
+      transform: translateY(-5px);
+      box-shadow: 0 2px 0 -2px #ff7b00,
+                  0 8px 0 -4px #ffb600,
+                  0 12px 10px -3px #ffb600;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .skills-button {
+        width: 160px;
+        height: 40px;
+        font-size: 0.9em;
+      }
+      
+      .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      }
+    }
+
+    /* Contact Form Feedback */
+    .form-message {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .form-message.success {
+      color: #28a745;
+    }
+
+    .form-message.error {
+      color: #dc3545;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Mithill Prabhu" width="80">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="Mithill Prabhu">Mithill Prabhu</h1>
+          <p class="title">Automation and Robotics Student</p>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <img width="48" height="48" src="https://img.icons8.com/stickers/100/phone.png" alt="phone"/>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+919342294574" class="contact-link">+91 93422 94574</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <img width="48" height="48" src="https://img.icons8.com/stickers/100/calendar.png" alt="calendar"/>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+              <time datetime="2005-10-27">October 27, 2005</time>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <img width="48" height="48" src="https://img.icons8.com/stickers/100/map-pin.png" alt="map-pin"/>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Coimbatore, Tamil Nadu, India</address>
+            </div>
+          </li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="mailto:psmithill27@gmail.com" class="social-link">
+              <img width="48" height="48" src="https://img.icons8.com/fluency/48/gmail-new.png" alt="gmail-new"/>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.instagram.com/miithill?igsh=M2ttaHRscTFvc3Bv" class="social-link" target="_blank">
+              <img width="48" height="48" src="https://img.icons8.com/3d-fluency/94/instagram-logo.png" alt="instagram-logo"/>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://linkedin.com/in/mithill-prabhu" class="social-link" target="_blank">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin"/>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+        </ul>
+      </nav>
+
+      <article class="about active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+        <section class="about-text">
+          <p>Curious mind.<br>Driven by purpose<br>Building the future, one project at a time.</p>
+          <p>
+            I'm an engineering student passionate about automation, robotics, and innovation. I believe in learning by
+            doing, collaborating with purpose, and staying hands-on with technology to create impactful solutions.
+            From shaping ideas into working prototypes to being part of dynamic student teams, I'm always looking to
+            grow, contribute, and explore the endless possibilities that engineering offers.
+          </p>
+        </section>
+        <section class="service">
+          <h3 class="h3 service-title">Skills & Expertise</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img width="100" height="100" src="https://img.icons8.com/stickers/100/code.png" alt="code"/>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Embedded Systems Programming</h4>
+                <p class="service-item-text">
+                  Writing code for microcontrollers like Arduino to control electronics.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img width="100" height="100" src="https://img.icons8.com/stickers/100/business-network.png" alt="business-network"/>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Project Planning & Teamwork</h4>
+                <p class="service-item-text">
+                  Organizing tasks and collaborating effectively to complete projects.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img width="100" height="100" src="https://img.icons8.com/stickers/100/3d-scale.png" alt="3d-scale"/>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">CAD Modeling</h4>
+                <p class="service-item-text">
+                  Designing 3D parts and assemblies using Fusion 360 or AutoCAD.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img width="100" height="100" src="https://img.icons8.com/stickers/100/google-docs.png" alt="google-docs"/>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Technical Documentation</h4>
+                <p class="service-item-text">
+                  Creating clear project reports, manuals, and design documents.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <div class="modal-container" data-modal-container>
+          <div class="overlay" data-overlay></div>
+          <section class="testimonials-modal">
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+            <div class="modal-content">
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+              <time datetime="2021-06-14">14 June, 2021</time>
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <article class="resume" data-page="resume">
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Amrita Vishwa Vidyapeetham, Coimbatore</h4>
+              <span>2023 — 2027</span>
+              <p class="timeline-text">
+                Btech in Automation and Robotics Engineering
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">The Ideal Mount Litera Zee School</h4>
+              <span>2019 — 2023</span>
+              <p class="timeline-text">
+                High School Diploma
+              </p>
+            </li>
+          </ol>
+        </section>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Team Lead</h4>
+              <span>2024 — Present</span>
+              <p class="timeline-text">
+                Team Ravage
+                <br>
+                We are team of students from Amrita Vishwa Vidyapeetham, Coimbatore, working on various projects
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Core Team Member</h4>
+              <span>2024 — present</span>
+              <p class="timeline-text">
+                IETE (Institute of Electronics and Telecommunication Engineers)
+                <br>
+                We are a vibrant, student-run club at Amrita Vishwa Vidyapeetham, Coimbatore, bringing together tech enthusiasts to spark creativity and collaboration.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Vehicle Dynamics Engineer</h4>
+              <span>2023 - 2024</span>
+              <p class="timeline-text">
+                Moto Amrita
+                <br>
+                We are a team of students from Amrita Vishwa Vidyapeetham, Coimbatore, working on building an electric motorcycle for the Moto Student competition.
+              </p>
+            </li>
+          </ol>
+        </section>
+        <section class="skill">
+          <h3 class="h3 skills-title">My skills</h3>
+          <div class="skills-grid content-card">
+            <button class="skills-button">CAD Modelling</button>
+            <button class="skills-button">Technical Documentation</button>
+            <button class="skills-button">ADAMS</button>
+            <button class="skills-button">Project Planning</button>
+            <button class="skills-button">Team Work</button>
+            <button class="skills-button">Excel</button>
+            <button class="skills-button">PowerPoint</button>
+          </div>
+        </section>
+      </article>
+
+      <article class="portfolio" data-page="portfolio">
+        <article class="filter-select" data-select></article>
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+        <section class="projects">
+          <ul class="project-list">
+            <li class="project-item active" data-filter-item data-category="robotics">
+              <a href="#">
+                <figure class="project-img">
+                  <img src="./assets/images/linefollower.jpg" alt="Line Follower" loading="lazy">
+                </figure>
+                <h3 class="project-title">Line Follower</h3>
+                <p class="project-category">Robotics</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="robotics">
+              <a href="#">
+                <figure class="project-img">
+                  <img src="./assets/images/roborace.jpeg" alt="RoboRace" loading="lazy">
+                </figure>
+                <h3 class="project-title">RoboRace</h3>
+                <p class="project-category">Robotics</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="machine learning">
+              <a href="#">
+                <figure class="project-img">
+                  <img src="./assets/images/vibration.jpg" alt="Vibration Analysis Using Machine Learning" loading="lazy">
+                </figure>
+                <h3 class="project-title">Vibration Analysis Using ML</h3>
+                <p class="project-category">Machine Learning</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="electric vehicle">
+              <a href="#">
+                <figure class="project-img">
+                  <img src="./assets/images/motoamrita.jpeg" alt="MotoAmrita Bike" loading="lazy">
+                </figure>
+                <h3 class="project-title">MotoAmrita Bike</h3>
+                <p class="project-category">Internal Combustion Vehicle</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <!-- custom js link -->
+  <script src="./assets/js/script.js"></script>
+  <script src="./pages/api/contact"></script>
+
+  <!-- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
